@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+:root {
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #fcf3f6;
+}
+
+.container {
+  width: var(--container-width-lg);
+  margin: 30px auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #2c292b;
+}
+
+.title__all {
+  text-align: center;
+  margin: 30px 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #2c292b;
+}
+
+/* ========= MEDIA QUERIES (MEDIUM DEVİCES) ================ */
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+}
+
+/* ========= MEDIA QUERIES (MOBILE DEVİCES) ================ */
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-sm);
+  }
+  .list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 0 auto;
+  }
+}
